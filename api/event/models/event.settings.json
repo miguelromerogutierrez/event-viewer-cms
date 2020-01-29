@@ -12,9 +12,6 @@
     "Title": {
       "type": "string"
     },
-    "description": {
-      "type": "text"
-    },
     "dateEvent": {
       "type": "date"
     },
@@ -29,13 +26,16 @@
       "collection": "user",
       "via": "events"
     },
-    "shortDescription": {
-      "type": "text"
-    },
     "sponsors": {
       "collection": "sponsor",
       "via": "events",
       "dominant": true
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "shortDescription": {
+      "type": "text"
     }
   }
 }
