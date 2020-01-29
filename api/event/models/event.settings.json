@@ -1,0 +1,41 @@
+{
+  "connection": "default",
+  "collectionName": "events",
+  "info": {
+    "name": "Event"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "dateEvent": {
+      "type": "date"
+    },
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "users": {
+      "plugin": "users-permissions",
+      "collection": "user",
+      "via": "events"
+    },
+    "shortDescription": {
+      "type": "text"
+    },
+    "sponsors": {
+      "collection": "sponsor",
+      "via": "events",
+      "dominant": true
+    }
+  }
+}

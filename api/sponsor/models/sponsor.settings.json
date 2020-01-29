@@ -1,0 +1,29 @@
+{
+  "connection": "default",
+  "collectionName": "sponsors",
+  "info": {
+    "name": "Sponsor"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "avatar": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "about": {
+      "type": "text"
+    },
+    "events": {
+      "via": "sponsors",
+      "collection": "event"
+    }
+  }
+}
